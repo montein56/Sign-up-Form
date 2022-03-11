@@ -5,7 +5,6 @@ body{
     height: 100%;
 }
 :root {
-    --purple: #8a6393;
     --light-purple: #a687c9;
     --yellow: #ffd000;
   }
@@ -33,7 +32,6 @@ section{
 
 .card-image {
     width:100%;
-    /* z-index: -1; */
 }
 .card-subimage{
     position: absolute;
@@ -63,7 +61,7 @@ form{
     flex-direction: column;
 }
 .right-top-para{
-    margin-top: 12%;
+    margin-top: 10%;
     margin-right: 15%;
 }
 .input-inline{
@@ -73,22 +71,21 @@ form{
 
 p>label{
     display: block;
-}  
+}
 
 input[type=text], [type=email], [type=tel], [type=password]{
-    /* border: solid 1px var(--light-purple); */
     border-radius: 5px;
-    /* width: 50%; */
     padding: 4% 2%;
-    font-size: 1.1rem;
-    background-color: blanchedalmond;
+    font-size: 1.2rem;
 }
-input:active{
-    border: none;
+input:invalid{
+    background-color:rgb(201, 158, 150);
+    border: red 2px solid;
 }
+
 input:focus{
-    border: solid 2px lightblue;
-    box-shadow: 0 4px lightblue;
+    outline: solid 3px var(--yellow);
+    box-shadow: 0 2px #eee9f1;
 }
 input[type=submit]{
   background-color: var(--light-purple);
@@ -98,9 +95,8 @@ input[type=submit]{
   font-size: 1.2rem;
   padding: 2%;
   text-decoration: none;
-  /* margin: 4px 2px; */
   cursor: pointer;
-  width:238px;
+  width:258px;
 }
 
 a{
@@ -120,7 +116,7 @@ a{
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     section{
         flex-direction: column;
     }
@@ -128,7 +124,8 @@ a{
         padding: 15%;
     }
     #card-container {
-        width: 100vw;
+        width: 67vw;
+        margin: auto;
     }
     .card-image {
         height:20vh;

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signup.css">
+    <script src="signup.js" defer></script>
     <title>SIGN UP FORM</title>
 </head>
 
@@ -23,45 +24,46 @@
                 your deepest dreams.<br> Sign up <em>now</em> to get started.<br><br>You <em>know</em> you want
                 to.<br><br></p>
 
-            <form action="#" method="post">
+            <form action="">
                     <p>Let's do this</p>
                     <div>
                         <p class="input-inline">
-                            <label for="firstname">FIRST NAME*</label>
-                            <input required type="text" id="firstname" name="firstname" placeholder="Bob" height="44">
+                            <label for="firstname">*FIRST NAME</label>
+                            <input required type="text" id="firstname" name="firstname" height="44">
                         </p>
                         <p class="input-inline">
-                            <label for="lastname">LAST NAME*</label>
-                            <input required type="text" id="lastname" name="lastname" placeholder="Smith">
+                            <label for="lastname">*LAST NAME</label>
+                            <input required type="text" id="lastname" name="lastname">
                         </p>
                     </div>
                     <div>
                         <p class="input-inline">
-                            <label for="email">EMAIL*</label>
-                            <input required type="email" id="email" name="email" placeholder="someone@example.com">
+                            <label for="email">*EMAIL</label>
+                            <input required type="email" id="email" name="email">
                         </p>
                         <p class="input-inline">
-                            <label for="phone">PHONE NUMBER</label>
-                            <input required type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                            <label for="phone">PHONE: Format 123-456-7890</label>
+                            <input type="tel" id="phone" name="phone"
+                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                required>                                
                         </p>
                     </div>
                     <div>
                         <p class="input-inline">
-                            <label for="password">PASSWORD*</label>
-                            <input required type="password" id="password" name="password" placeholder="********">
+                            <label for="password">*PASSWORD: Min. 8 characters<br>1 Uppercase, 1 Lowercase</label>
+                            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password" required>
                         </p>
                         <p class="input-inline">
-                            <label for="password2">CONFIRM PASSWORD*</label>
-                            <input required type="password" id="password2" name="password2" placeholder="********">
+                            <label for="password2">*CONFIRM PASSWORD</label>
+                            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required type="password" id="password2" name="password">
                         </p>
                     </div>
-                <input type="submit" value="Create Account">
+                <input type="submit" onclick="validatePassword()" value="Create Account">
             </form>
             <p>Already have an account?</p>
             <a href="">Log in</a>
         </div>
     </section>
 </body>
-<!-- Ahmed Atef -->
 
 </html>
