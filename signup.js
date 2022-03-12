@@ -11,5 +11,3 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 password2.onkeyup = validatePassword;
-
-// password2.setCustomValidity
