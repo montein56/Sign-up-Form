@@ -11,17 +11,16 @@ section{
     display: flex;
     width: 64vw;
     margin: 0 auto;
-    height: 100vh;
+    height:100vh;
 }
 
-#card-container {
+#card-container {  
     display: flex;
     position: relative;
     width: 33%;
   }
 
 #right{
-    font-size: 1.1rem;
     color: var(--light-purple);
     display: flex;
     flex-direction: column;
@@ -62,7 +61,7 @@ form{
 }
 #notReal{
     width: 75%;
-    margin-top: 5%;
+    margin-top: 25%;
 }
 .input-inline{
     display: inline-block;
@@ -117,22 +116,23 @@ a{
         width: 100vw;
     }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 915px) {
     section{
         flex-direction: column;
+        height: 100%;
     }
     #right{
         padding: 0 12%;
         font-size: .8rem;
     }
     #notReal{
+        margin-top: 5%;
         width: 60vw;
         padding: 0 2%;
         font-size: 1rem;
     }
     #card-container {
         width: 100vw;
-        margin: 1%;
     }
     .card-subimage{
         top: 30%;
