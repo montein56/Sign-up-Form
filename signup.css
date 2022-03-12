@@ -31,6 +31,7 @@ section{
 
 .card-image {
     width:100%;
+    object-fit: cover;
 }
 .card-subimage{
     position: absolute;
@@ -111,31 +112,30 @@ a{
         width: 80vw;
     }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     section{
         width: 100vw;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     section{
         flex-direction: column;
     }
     #right{
-        padding: 0 20%;
-        font-size: .9rem;
+        padding: 0 12%;
+        font-size: .8rem;
     }
     #notReal{
         width: 60vw;
+        padding: 0 2%;
+        font-size: 1rem;
     }
     #card-container {
-        width: 67vw;
-        margin: auto;
-    }
-    .card-image {
-        height:20vh;
+        width: 100vw;
+        margin: 1%;
     }
     .card-subimage{
-        top: 15%;
+        top: 30%;
     }
     .subimage{
         width: 9%;
